@@ -12,10 +12,14 @@ def clock_callback(clock):
 
     value += 1
     if value == threshold:
+        value_pub.publish(value)
+    '''
+    if value == threshold:
         rospy.loginfo("Clock: " + str(clock) + ", Threshold: " + str(value))
         value_pub.publish(value)
     else:  
         rospy.loginfo("Clock: " + str(clock) + ", Value: " + str(value))
+    '''
 
 if __name__ == '__main__':
     rospy.init_node("counter_node")

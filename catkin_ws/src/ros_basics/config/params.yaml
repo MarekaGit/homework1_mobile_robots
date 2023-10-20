@@ -2,7 +2,7 @@ counter_node:
   ros__parameters:
     init_value: 0
     threshold: 20
-    N: 3
+    N: 2
 
 sumup_node:
   ros__parameters:
@@ -10,4 +10,4 @@ sumup_node:
 
 system_clock_node:
   ros__parameters:
-    rate: 1
+    rate: 0.2

@@ -17,6 +17,7 @@ if __name__ == '__main__':
     
     while not rospy.is_shutdown():
         clock_value += 1
+        rospy.loginfo("Clock: " + str(clock_value))
         pub.publish(clock_value)
         rate.sleep()
     
