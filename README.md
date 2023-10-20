@@ -1,1 +1,2 @@
-# homework1_mobile_robots
+# Control of Mobile Robots
+## Homework1 : Ros basics
