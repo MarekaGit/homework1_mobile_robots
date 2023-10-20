@@ -1,0 +1,13 @@
+counter_node:
+  ros__parameters:
+    init_value: 0
+    threshold: 20
+    N: 3
+
+sumup_node:
+  ros__parameters:
+    alpha: 2
+
+system_clock_node:
+  ros__parameters:
+    rate: 1

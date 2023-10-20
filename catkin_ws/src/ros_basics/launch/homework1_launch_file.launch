@@ -1,0 +1,25 @@
+<launch>
+    <!-- Load parameters from params.yaml -->
+    <rosparam file="$(find ros_basics)/config/params.yaml" command="load" />
+
+    <!-- Launch system_clock node with parameters -->
+    <node name="system_clock_node" pkg="ros_basics" type="system_clock.py" output="screen">
+        <!--<param name="rate" value="$(arg rate)"/>-->
+    </node>
+
+    <!-- Launch sumup node with parameters -->
+    <node name="sumup_node" pkg="ros_basics" type="sumup.py" output="screen">
+        <!--<param name="alpha" value="$(arg alpha)"/>-->
+    </node>
+
+     <!--Argument to the launch file-->
+    <arg name="num_counter_nodes" default="2"/>
+    <!-- Launch N counter nodes -->
+    <group ns="counters">
+        <!-- Launch counter nodes -->
+        <node name="counter_node1" pkg="ros_basics" type="counter.py" output="screen">
+        </node>
+        <node name="counter_node2" pkg="ros_basics" type="counter.py" output="screen">
+        </node>
+    </group>
+</launch>
